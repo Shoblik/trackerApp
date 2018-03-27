@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import rightArrow from '../assets/images/right_arrow.png';
 import leftArrow from '../assets/images/left_arrow.png';
 
+
 class LoginForm extends Component {
     constructor(props) {
         super(props);
@@ -20,8 +21,13 @@ class LoginForm extends Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        console.log('Username: ', this.state.username);
-        console.log('Password: ', this.state.password);
+
+        if (this.state.username === 'Simon Hoblik' && this.state.password == 123) {
+            this.props.history.push('/homepage');
+        } else {
+            console.log('wrong password');
+        }
+
 
     }
     render() {

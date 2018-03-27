@@ -8,7 +8,7 @@ class Login extends Component {
         return (
             <div>
                 <Header />
-                <LoginForm />
+                <LoginForm history={this.props.history} />
             </div>
         );
     }
