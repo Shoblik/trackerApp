@@ -4,7 +4,9 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100%
+    min-height: 100%;
+    font-family: 'Raleway', cursive;
+
 }
 .logo {
     width: 75px;
@@ -14,15 +16,38 @@ body {
     border-radius: 50%;
     margin: auto;
 }
+.secondaryLogo {
+    margin: 0;
+    position:relative;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+.secondaryHeading > h2 {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    left: 20%;
+    vertical-align: top;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.secondaryHeading {
+    height: 15vh;
+    border-bottom: 1px solid black;
+}
 .headerContainer {
     text-align: center;
     position: relative;
     top: 5vh;
+    height: 25vh;
     width: 100%;
     font-family: 'Raleway', cursive;
 }
 .headerContainer > h1 {
     margin-bottom: 10px;
+    margin-top: 0;
 }
 .subtitle > p {
     margin-top: 0;
@@ -36,17 +61,17 @@ body {
     transform: translateX(-50%);
     font-family: 'Raleway', cursive;
 }
-.loginFormContainer > form {
+form {
     margin: auto;
     width: 65%;
 }
-form > div > input {
+input {
     border: 1px solid black;
     width: 100%;
     height: 25px;
     border-radius: 5px;
 }
-.loginFormContainer > form div {
+form div, h2 div {
     margin-bottom: 5px;
 }
 form > div div {
@@ -60,10 +85,96 @@ form > div div {
     background-color: transparent;
     border: none;
 }
-.registerBtn {
+.registerBtn, .arrow-button {
     background-color: transparent;
     border: none;
 }
 .registerSection {
     text-align: center;
+}
+
+form > h2 {
+    text-align: center;
+    position: relative;
+    top: 5%;
+    text-decoration: underline;
+}
+.toTrackingContainer {
+    position: relative;
+    text-align: center;
+    top: 8vh;
+}
+.toShowDataContainer {
+    position: relative;
+    text-align: center;
+    top: 15vh;
+}
+.toLogDataContainer {
+    position: relative;
+    text-align: center;
+    top: 25vh;
+}
+
+/*////////////////*/
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+/*  UPDATED! flip the pane when hovered */
+/*.flip-container:hover .back {*/
+    /*transform: rotateY(0deg);*/
+/*}*/
+/*.flip-container:hover .front {*/
+    /*transform: rotateY(180deg);*/
+/*}*/
+
+.flip-container, .front, .back {
+    width: 100%;
+    height: 70vh;
+    top: 5vh;
+    position: relative;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(-180deg);
+}
+
+/*
+	Some vertical flip updates
+*/
+.vertical.flip-container {
+    position: relative;
+}
+
+.vertical .back {
+    transform: rotateX(180deg);
+    background-color: black;
 }
