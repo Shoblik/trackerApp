@@ -8,6 +8,13 @@ body {
     font-family: 'Raleway', cursive;
 
 }
+a {
+    color: black;
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+}
 .logo {
     width: 75px;
     height: 75px;
@@ -115,6 +122,86 @@ form > h2 {
     top: 25vh;
 }
 
+.thingsToTrackContainer {
+    text-align: center;
+    position: relative;
+    top: 3vh;
+}
+.trackInput {
+    width: 60%;
+}
+.trackSubmit {
+    height: 30px;
+    background-color: white;
+    box-shadow: none;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.inputHandler > span {
+    margin-right: 5px;
+}
+.inputHandler {
+    position: relative;
+    top: 5vh;
+}
+.titlePill {
+    position: relative;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    transition: .3s;
+}
+.pillContainer {
+    position: relative;
+    top: 10vh;
+    text-align: center;
+}
+.hoverable:hover {
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+.titleDataContainer {
+    text-align: center;
+}
+.titleDataContainer > h1 {
+    position:relative;
+    top: 3vh;
+}
+.btnContainer {
+    position: relative;
+    top: 2vh;
+}
+.btnContainer button {
+    padding: 8px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+.btnContainer button:hover {
+    cursor: pointer;
+}
+.titleDataContainer > h2 {
+    position: relative;
+    top: 2vh;
+}
+input.dateSelection {
+    width: 30%;
+    vertical-align: top;
+    margin: 0 10px;
+}
+.calculateBtn {
+    padding: 5px;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid green;
+}
 /*////////////////*/
 
 /* entire container, keeps perspective */

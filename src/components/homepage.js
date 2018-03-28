@@ -6,16 +6,17 @@ import {Link} from 'react-router-dom';
 
 class Homepage extends Component {
     render() {
+        console.log(this.props);
         return (
             <div>
                 <Header />
                 <div className="toTrackingContainer">
-                    <h3>What would you like to track today?</h3>
+                    <h3>What would you like to track?</h3>
                     <Link to='/trackingConfig'><button className="arrow-button"><img src={rightArrow} /></button></Link>
                 </div>
                 <div className="toShowDataContainer">
                     <h3>SHOW ME THE DATA!</h3>
-                    <button className="arrow-button"><img src={rightArrow} /></button>
+                    <Link to='/showData'><button className="arrow-button"><img src={rightArrow} /></button></Link>
                 </div>
                 <div className="toLogDataContainer">
                     <h3>Log Data Here</h3>
